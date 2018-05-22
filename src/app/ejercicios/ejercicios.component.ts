@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Exercise } from '../exercise'
-import { EXERCISES } from '../mock-exercise'
+import { Exercise } from '../exercise';
+import { EXERCISES } from '../mock-exercise';
 
 @Component({
   selector: 'app-ejercicios',
@@ -21,5 +21,4 @@ export class EjerciciosComponent implements OnInit {
   onSelect(exercise: Exercise): void {
     this.selectedExercise = exercise;
   }
-
 }

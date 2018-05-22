@@ -1,16 +1,31 @@
 <div *ngIf="exercise" class="blockEjercicio">
-
   <h2>{{ exercise.Cadena | uppercase }} {{exercise.id}}</h2>
-  <div>
-    <span>
-      id: 
-    </span>
-    {{exercise.id}}
+  <div *ngIf="exercise.id === 1">
+    <h3> Fibonacci console </h3>
+    <input type="text" id="ej1" name="ej1" value="" [(ngModel)]="numero1" >
+    <button id="boton" (click)="fibonacci(numero1)" >calcular</button>
+    <h3 id="resultado"> </h3>
   </div>
-  <div>
-    <label>name:
-      <input placeholder="name"/>
-    </label>
+<!--********************************************************************-->
+  <div *ngIf="exercise.id === 2">
+    <h3> Fibonacci Array Console </h3>
+    <input type="text" id="ej2" name="ej2" value="" [(ngModel)]="numero2" >
+    <button id="boton" (click)="fibonacciArray(numero2)" >calcular</button>
+    <h3 id="resultado"> </h3>
   </div>
-
+<!--********************************************************************-->
+<div *ngIf="exercise.id === 3">
+  <h3> Simple arithmetic evaluator (2 numbers, 1 operator) </h3>
+  <input type="text" id="ej3" name="ej3" value="" [(ngModel)]="cadena" >
+  <button id="boton" (click)="evaluator(cadena)" >calcular</button>
+  <h3 id="resultado"> </h3>
+</div>
+<!--********************************************************************-->
+<div *ngIf="exercise.id === 4">
+  <h3> Arithmetic calculator (n-numbers, m-operators, parenthesis) </h3>
+  <input type="text" id="ej4" name="ej4" value="" [(ngModel)]="cadena" >
+  <button id="boton" (click)="evaluator2(cadena)" >calcular</button>
+  <h3 id="resultado"> </h3>
+</div>
+<!--********************************************************************-->
 </div>

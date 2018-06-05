@@ -23,7 +23,7 @@ export class EjercicioDetailComponent implements OnInit {
     document.getElementById('oculto').style.display = 'block';
   }
 
-  fibAux(aux) {
+  fibAux(aux: number) {
     if (aux === 1 || aux === 2) {
       return 1 ;
     } else {

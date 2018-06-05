@@ -2,14 +2,14 @@
   <h2>{{ exercise.Cadena | uppercase }} {{exercise.id}}</h2>
   <div *ngIf="exercise.id === 1">
     <h3> Fibonacci console </h3>
-    <input type="text" id="ej1" name="ej1" value="" [(ngModel)]="numero1" >
+    <input type="number" id="ej1" name="ej1" value="" [(ngModel)]="numero1" >
     <button id="boton" (click)="fibonacci(numero1)" >calcular</button>
     <h3 id="resultado"> </h3>
   </div>
 <!--********************************************************************-->
   <div *ngIf="exercise.id === 2">
     <h3> Fibonacci Array Console </h3>
-    <input type="text" id="ej2" name="ej2" value="" [(ngModel)]="numero2" >
+    <input type="number" id="ej2" name="ej2" value="" [(ngModel)]="numero2" >
     <button id="boton" (click)="fibonacciArray(numero2)" >calcular</button>
     <h3 id="resultado"> </h3>
   </div>

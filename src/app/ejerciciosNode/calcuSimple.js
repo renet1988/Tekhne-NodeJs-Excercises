@@ -1,12 +1,18 @@
+var reader = require("read-console");
+reader.read("Ingresar un numero: ", (aux)=> {
+  console.log(evaluator(aux));
+});
+
+
 function evaluator(cadena) {
-    const bool = cadEvaluator(cadena);
-    if ( bool ) {
-      const aux = eval(cadena);
-      console.log( aux );
-    } else {
-      console.log('La cadena ingresada contiene datos que no son numero u operadores aritmeticos');
-    }
+  const bool = cadEvaluator(cadena);
+  if ( bool ) {
+    const aux = eval(cadena);
+    console.log( aux );
+  } else {
+    console.log('La cadena ingresada contiene datos que no son numero u operadores aritmeticos');
   }
+}
 
 function  cadEvaluator(cad) {
     let bool = true;
@@ -31,5 +37,3 @@ function  cadEvaluator(cad) {
     }
     return false;
   }
-
-  console.log(evaluator('2+2'));

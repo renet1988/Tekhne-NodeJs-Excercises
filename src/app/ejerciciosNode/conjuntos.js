@@ -1,3 +1,10 @@
+var reader = require("read-console");
+reader.read("Ingresar un numero: ", (aux)=> {
+  console.log(fibonacci(aux));
+ 
+});
+
+
 var a = [3,5,1];
 var b = [1,8,9];
 

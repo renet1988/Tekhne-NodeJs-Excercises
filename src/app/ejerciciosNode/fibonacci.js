@@ -1,3 +1,9 @@
+var reader = require("read-console");
+reader.read("Ingresar un numero: ", (aux)=> {
+  console.log(fibonacci(aux));
+ 
+});
+
 function fibonacci(aux) {
   if (aux === 1 || aux === 2) {
     return 1 ;
@@ -5,4 +11,3 @@ function fibonacci(aux) {
     return ( fibonacci( aux - 1 ) + fibonacci( aux - 2 ));
   }
 }
-console.log(fibonacci(6));
